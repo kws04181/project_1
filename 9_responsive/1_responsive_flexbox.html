@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+    
+    .flex-container {
+      display: flex;
+
+      /* 방법 1 */
+      flex-direction: row;
+
+      /* 방법 2 */
+      /* flex-wrap: wrap; */
+
+      font-size: 30px;
+      text-align: center;
+    }
+    .flex-item-left {
+      background : linear-gradient(to left bottom, #d16ba5, #b764a6, #9a5da4, #7c58a0, #5b5299, #495fa5, #316bae, #0076b4, #0098cd, #00b9df, #0adaea, #5ffbf1);
+      padding: 10px;
+      flex: 1;
+    }
+    .flex-item-right {
+      background: linear-gradient(to right top, #d16ba5, #b764a6, #9a5da4, #7c58a0, #5b5299, #495fa5, #316bae, #0076b4, #0098cd, #00b9df, #0adaea, #5ffbf1);
+      padding: 10px;
+      flex: 1;
+    }
+
+    .flex-item-first {
+      background : linear-gradient(to bottom right, #d16ba5, #b764a6, #9a5da4, #7c58a0, #5b5299, #495fa5, #316bae, #0076b4, #0098cd, #00b9df, #0adaea, #5ffbf1);
+      padding: 10px;
+      flex: 1;
+    }
+    .flex-item-unimportant {
+      background: linear-gradient(to right, #d16ba5, #b764a6, #9a5da4, #7c58a0, #5b5299, #495fa5, #316bae, #0076b4, #0098cd, #00b9df, #0adaea, #5ffbf1);
+      padding: 10px;
+      flex: 1;
+    }
+    .flex-item-last {
+      background-image: linear-gradient(to bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+      padding: 10px;
+      flex: 1;
+    }
+
+    /* 반응형 레이아웃 - 1열 레이아웃 만들기 */
+    /* ~ 800px */
+    @media screen and (max-width: 800px){
+
+      /* 방법1 */
+      .flex-container {
+        flex-direction: column;
+      }
+
+      /* 방법2 */
+      /* .flex-item-left, .flex-item-right {
+        flex : 100%;
+      } */
+
+      .flex-item-unimportant {
+        display: none;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Flexbox</h1>
+  <div class="flex-container">
+    <div class="flex-item-left">1</div>
+    <div class="flex-item-right">2</div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item-first">1</div>
+    <div class="flex-item-unimportant">2</div>
+    <div class="flex-item-last">3</div>
+  </div>
+
+</body>
+</html>

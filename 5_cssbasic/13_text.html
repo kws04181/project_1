@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 180px;
+      border: 1px solid black;
+      
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow:ellipsis;
+    }
+    
+    .box_multiline {
+      width: 300px;
+      border: 1px solid black;
+      
+      /* white-space: nowrap; */
+      overflow: hidden;
+      text-overflow:ellipsis;
+      display:-webkit-box; /* 해당 영역을 box 형태로 관리 */
+      -webkit-line-clamp: 3; /* 영역 box 안 내용의 최대 라인수*/
+      -webkit-box-orient: vertical; /*영역 박스 안의 내용을 세로로 배치*/
+    }
+    /* webkit(벤더 프리픽스) : CSS3 표준으로 확정되기 이전 또는 브라우저 개발사가 실험적으로
+    제공하는 기능을 사용하기 위해  이전 버전의 브라우저까지 지원하려면 벤더 프리픽스를 붙여야 함
+    */
+
+  </style>
+</head>
+<body>
+  <h1> text-overflow : 오버플로우 된 내용을 어떻게 보일지 지정</h1>
+  <h2> ellipsis : 생략 (...)</h2>
+  <div class="box">이것은 매우 긴 제목입니당.</div>
+
+  <h2> 2줄 이상일 때</h2>
+  <div class="box_multiline">
+    이것은 매우 긴 제목입니당.
+    매우 긴 이것은 제목입니당.
+    매우 긴 이것은 제목입니당.
+    매우 긴 이것은 제목입니당.
+    제목입니당. 이것은 매우 긴 
+  </div>
+
+
+</body>
+</html>

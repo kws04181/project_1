@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input</title>
+</head>
+<body>
+  <input type="text">
+  <input type="text" value="seong.kim">
+  <input type="text" placeholder="이름을 입력하세요">
+  <input type="password" placeholder="패스워드를 입력하세요">
+  <input type="text" value="seong.kim" disabled>
+  <input type="text" value="seong.kim" readonly>
+  <hr>
+
+  <!-- 예제_1 -->
+  <label>
+    <input type="checkbox"> Apple
+  </label>
+  <label>
+    <input type="checkbox"> Orange
+  </label>
+  <br>
+  <!-- 예제_2 -->
+  <input type="checkbox" id="apple">
+  <label for="apple">Apple</label>
+  <input type="checkbox" id="orange">
+  <label for="orange">Orange</label>
+
+  <!--
+    label 바인딩 조건 :
+    1. label 요소 내부에 요소를 배치하여 레이블을 요소에 바인딩
+    2. for 속성이 <label> 관련 요소의 id 속성과 같아야 함. 
+  -->
+
+  <!-- 
+    label 사용의 이점 (웹 접근성과 관련):
+    1. 스크린 리더 사용자(사용자가 요소에 초점을 맞추면 레이블을 소리내어 읽어준다)
+    2. 매우 작은 영역(ex:확인란)을 클릭하는 데 어려움이 있는 사용자
+    - 사용자가 요소 내의 텍스르틑 클릭하면 입력이 토글되기 때문(히트영역이 증가함)
+   -->
+
+   <!-- 값을 미리 체크할수 있다 -->
+   <br>
+   <label>
+    <input type="checkbox"> Apple
+  </label>
+  <label>
+    <input type="checkbox" checked> Orange
+  </label>
+  <!-- radio 버튼 사용법-->
+  <!-- type만 사용하였을 경우-->
+   <br>
+   <hr>
+   <!-- name 속성으로 그룹화-->
+   <!-- 체크박스는 중복 선택 가능, 라디오 버튼은 그룹당 한개만 선택가능 -->
+   <label>
+    <input type="radio" name="fruits" checked> Apple
+  </label>
+  <label>
+    <input type="radio" name="fruits"> Orange
+  </label>
+  <label>
+    <input type="radio" name="fruits"> banana
+  </label>
+  <hr>
+
+  <!-- 그 밖에 다른 입력 양식들(w3school 참고) -->
+    <input type="button" value="닫기">
+    <button type="button">닫기</button>
+  <!-- 요소 내부에 텍스트 뿐만 아니라 태그 사용 가능 -->
+  <button><b>닫기</b></button><hr>
+  <!-- type 속성을 항상 지정하여 브라우저에 버튼 유형을 알려주는게 좋음 -->
+  <input type="color" name="" id="" value="ff0"><hr>
+  <input type="date" name="" id=""><hr>
+  <input type="datetime-local" name="" id=""><hr>
+  <input type="time" name="" id=""><hr>
+  <input type="file" name="" id=""><hr>
+  <input type="file" name="" id="" multiple><hr>
+  <input type="number" name="" id=""><hr>
+  <input type="range"name="" id="" min="1" max="20"><hr>
+
+  <select name="cars" id="cars">
+    <option value="volvo">volvo</option>
+    <option value="benz">benz</option>
+    <option value="bmw">bmw</option>
+  </select><hr>
+
+  <textarea name="" id="" cols="30" rows="6"></textarea><hr>
+  <!-- 텍스트 박스 사용자가 조절하지 못하게 (resize : none)) -->
+  <textarea name="" id="" cols="30" rows="6" style="resize: none;"></textarea>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* a:hover {
+      color: brown;
+      text-decoration: none;
+    } */
+    /* a:active {
+      color: burlywood;
+      text-decoration: none;
+    } */
+
+    /* :focus 대화형(interactive)요소에만 대입가능 */
+    /* input , a , button , label , select 등 */
+    input:focus {
+      background-color: coral;
+      color: black;
+    }
+
+    /* .fruits div:first-child{
+      color: aqua;
+    } */
+    
+    /* .fruits h3:last-child{
+      color: red;
+    }
+
+    .fruits *:nth-child(2n+1){
+      color: blue;
+    } */
+    
+    /* .fruits *:nth-child(n+4){
+      color: blue;
+    } */
+    
+    .fruits *:not(span){
+      color: blue;
+    }
+
+    .fruits *:nth-child(2):hover {
+      color: rgb(255, 0, 0);
+      transition: 1.5s;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <a href="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=pseudo">
+    NAVER
+  </a>
+
+  <br><hr>
+
+  <input type="text">
+
+  <br><hr>
+
+  <div class="fruits">
+      <span>딸기</span>
+      <span>수박</span>
+      <div>오렌쥐이</div>
+      <p>망고</p>
+      <h3>사과</h3>
+  </div>
+
+</body>
+</html>

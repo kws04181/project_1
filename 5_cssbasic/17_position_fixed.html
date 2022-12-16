@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body {
+      height: 2000px;
+    }
+
+    .grandparent {
+      width: 800px;
+      height: 550px;
+      background-color: rgb(255, 81, 0);
+      position: relative;
+    }
+    
+    .parant {
+      width: 600px;
+      height: 350px;
+      background: rosybrown;
+      padding: 20px;
+      /* position: relative; */
+    }
+    .child-1 {
+      width: 250px;
+      height: 150px;
+      background: royalblue;
+    }
+    .child-2 {
+      width: 210px;
+      height: 150px;
+      background: rgb(63, 223, 49);
+      position: fixed ;
+      /* 뷰포트 기준으로 배치(화면을 스크롤해도 요소의 위치가 고정됨*/
+      /* fixed를 쓰면 일반 배치 흐름에서 벗어남(제외) */
+      bottom: 50px;
+      right: 50px;
+
+    }
+    .child-3 {
+      width: 150px;
+      height: 250px;
+      background: rgb(158, 170, 207);
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="grandparent">
+    <div class="parant">
+      <div class="child-1"></div>
+      <div class="child-2"></div>
+      <div class="child-3"></div>
+    </div>
+  </div>
+</body>
+</html>

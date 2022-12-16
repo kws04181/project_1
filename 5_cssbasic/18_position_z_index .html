@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .parant {
+      width: 600px;
+      height: 350px;
+      background: rosybrown;
+      padding: 20px;
+      position: relative;
+    }
+
+    .child-1 {
+      width: 250px;
+      height: 150px;
+      background: royalblue;
+      position: relative;
+      z-index: 999;
+    }
+
+    .child-1:hover {
+      background: orange;
+      transition: 2s;
+    }
+
+    .child-1:active {
+      background: red;
+    }
+
+    .child-2 {
+      width: 450px;
+      height: 250px;
+      background: rgb(63, 223, 49);
+      position: absolute;
+      top: 80px;
+      left: 70px;
+      z-index: 1;
+    }
+    
+    .child-3 {
+      width: 250px;
+      height: 250px;
+      background: rgb(158, 170, 207);
+      position: absolute;
+      bottom: -60px;
+      right: -30px;
+      z-index: 2;
+    }
+    
+    /* z-index
+      ex)슬라이드 메뉴,드롭다운(콤보 박스),모달창,백그라운드 비활성화 등에 사용 
+    */
+  </style>
+</head>
+<body>
+
+<div class="parant">
+  <div class="child-1"></div>
+  <div class="child-2"></div>
+  <div class="child-3"></div>
+</div>
+
+</body>
+</html>

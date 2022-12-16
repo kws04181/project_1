@@ -1,0 +1,67 @@
+
+    /* 전역 변수 설정 */
+    :root {
+      --color-text: #424242;
+      --color-background: #044288;
+      --color-background_sub: #316db1;
+      --color-orange: #ff9950;
+    }
+  
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .btn {
+      width: 100px;
+      height: 40px;
+      border-color: var(--color-orange);
+      border-radius: 4px;
+      font-size: 1rem;
+      background-color: transparent;
+      cursor: pointer;
+      color: var(--color-orange);
+    }
+
+    .btn:hover {
+      color: var(--color-text);
+      background-color: var(--color-orange);
+    }
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-background_sub);
+  padding: 10px 20px;
+}
+header .logo {
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+}
+.material-icons {
+  font-size: inherit;
+  color: var(--color-orange);
+}
+
+header .nav__menu--main {
+  display: flex;
+}
+
+header .nav__menu--main > li {
+  padding: 8px 12px;
+}
+
+header .nav__menu--main > li:hover {
+  background-color: var(--color-orange);
+  border-radius: 4px;
+}
+
+.btn-hamburger {
+  position: absolute;
+  right: 32px;
+  font-size: 48px;
+  display: none;
+}

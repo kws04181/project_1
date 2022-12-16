@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .grandparent {
+      width: 800px;
+      height: 550px;
+      background-color: rgb(255, 81, 0);
+      position: relative;
+    }
+    
+    .parant {
+      width: 600px;
+      height: 350px;
+      background: rosybrown;
+      padding: 20px;
+      /* position: relative; */
+    }
+    .child-1 {
+      width: 250px;
+      height: 150px;
+      background: royalblue;
+    }
+    .child-2 {
+      width: 210px;
+      height: 150px;
+      background: rgb(63, 223, 49);
+      position: absolute ;
+      
+      /* 기준 요소가 없으면 최사위 루트(html)까지 올라간다
+        => 뷰포트 기준 */
+
+      /* top: 0px;
+      left: 0px; */
+      top: 50px;
+      right: 50px;
+
+    }
+    .child-3 {
+      width: 150px;
+      height: 250px;
+      background: rgb(158, 170, 207);
+      /* position: absolute; */
+    }
+
+    /* 보통은 absolute 사용 시 부모 요소에 relative 지정 */
+  </style>
+</head>
+<body>
+  <div class="grandparent">
+    <div class="parant">
+      <div class="child-1"></div>
+      <div class="child-2"></div>
+      <div class="child-3"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background: royalblue;
+    }
+
+    div + div {
+      margin: 20px 0px 0px 0px;
+    }
+
+    .transition-1 {
+      transition: width 1s, height 1s linear 0.5s;
+    }
+
+    .transition-1:hover {
+      width: 200px;
+      height: 200px;
+      background: teal;
+      transition: 3s, width 1s, height 1s linear 0.5s;
+    }
+
+    .transition-2 {
+      transition: width 2s cubic-bezier(.42,0,.58,1) ;
+    }
+
+    .transition-2:hover {
+      width: 300px;
+      background: red;
+      transition: 3s;
+    }
+
+    .transition-1:active {
+      transition: 1s;
+      background: red;
+      width: 120px;
+      height: 120px;
+      transform: rotate(35deg);
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+
+    .transition-3 {
+      transition:1s;
+      position: relative;
+      left: 0;
+      top:0;
+      font-size: 30px;
+      line-height: 100px;
+      text-align: center;
+      color: white;
+    }
+    
+    .transition-3:active {
+      left: 50px;
+      top: 30px;
+      background: antiquewhite;
+      transform: rotate(45deg);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>transition 단축 속성</h1>
+  <div class="transition-1"></div>
+  <div class="transition-2"></div>
+  <div class="transition-3">가</div>
+</body>
+</html>

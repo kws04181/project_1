@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    /* body {
+      display: flex;
+      flex-direction: row-reverse;
+    } */
+    .container_1 {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(255, 0, 0);
+        /* max-width: 1000px;
+        min-width: 1000px; */
+    }
+    
+    .container_2 .item {
+      width: 50px;
+      height: 50px;
+      background-color: coral;
+      border: 2px solid rgb(255, 0, 0);
+      margin: 5px;
+      /* padding: 10px; */
+    }
+    
+    .container_2 .item:first-child {
+      padding: 5px 10px 15px 25px;
+    }
+    
+    .container_2 .item:last-child {
+      padding: 20px 20px 10px 20px;
+      background-color: antiquewhite;
+      /* border: 6px dashed black; */
+    }
+    
+    .container_3 .item {
+      margin: 5px;
+      width: 50px;
+      height: 50px;
+      background: skyblue;
+    }
+    
+    .container_3 .item:first-child {
+      /* border: 10px solid; */
+      border: 5px solid green;
+      border-right: none;
+    }
+    
+    .container_3 .item:nth-child(2){
+      border: 5px dashed red;
+      border-left: none;
+    }
+    
+    .container_3 .item:nth-child(3){
+      border: 5px dotted rgb(248, 38, 248);
+      border-top: none;
+    }
+    
+    .container_4 {
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(97, 252, 92);
+        border-radius: 50%;
+        /* max-width: 1000px;
+        min-width: 1000px; */
+    }
+    
+    .container_5 {
+      width: 150px;
+      height: 150px;
+      background: aquamarine;
+    }
+
+    .container_5.compare {
+      background: aquamarine;
+      border: 5px solid blue;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .container_6 {
+      width: 150px;
+      height: 150px;
+      background: aquamarine;
+      overflow: auto;
+    }
+
+    .container_overflow {
+      width: 250px;
+      height: 50px;
+      background: red;
+    }
+
+    </style>
+</head>
+<body>
+  
+  <h4>1. width, height</h4>
+  <div class="container_1"></div>
+
+  <h4>2. margin, padding</h4>
+  <div class="container_2">
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+
+  <h4>3. border</h4>
+  <div class="container_3">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+
+  <h4>4. border-radius</h4>
+  <div class="container_4"></div>
+
+  <h4>5. box-sizing</h4>
+  <div class="container_5 compare">Hello</div>
+  <div class="container_5">Hello</div>
+   
+  <h4>6. overflow</h4>
+  <div class="container_6">
+    <div class="container_overflow"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버 : 회원가입 </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="naver.css">
+  <style>
+    body {
+    font-family: Dotum, '돋움', Helvetica, sans-serif;
+    background: #f5f6f7;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더 영역 -->
+  <div class="header">
+    <div class="top">
+      <h1>
+        <a href="https://www.naver.com/">
+          <img src="https://ssl.pstatic.net/static/nid/join/m_logo_naver.png" alt="네이버로고">
+        </a>
+      </h1>
+    </div>
+  </div>
+
+  <!-- 메인(컨테이너 영역) -->
+  <div class="container">
+    <div class="section-input">
+      <label for="#"><h3>아이디</h3></label>
+      <input type="text">
+      
+      <label for="#"><h3>비밀번호</h3></label>
+      <input type="password">
+
+      <label for="#"><h3>비밀번호 재확인</h3></label>
+      <input type="password">
+
+    </div>
+    
+    <div class="section-input_2">
+      
+      <label for="#"><h3>이름</h3></label>
+      <input type="text">
+      <label for="#"><h3>생년월일</h3></label>
+      <div class="text_3_type">
+        <input type="text" placeholder="년(4자)">
+        <input type="month" >
+        <input type="text" placeholder="일">
+      </div>
+      <label for="#"><h3>성별</h3></label>
+      <select name="gender" id="gender">
+        <option value="" selected><span style="margin-left: 10px;">성별</span></option>
+        <option value="M">남자</option>
+        <option value="W">여자</option>
+      </select>
+      
+      <label for="#"><h3>본인 확인 이메일 (선택)</h3></label>
+      <input type="text" placeholder="선택입력">
+    </div>
+    <div class="section-input_3">
+      <label for="#"><h3>휴대전화</h3></label>
+      <select name="phone" id="phone">
+        <option value="" selected>대한민국 +82</option>
+        <option value="KT">KT</option>
+        <option value="SKT">SKT</option>
+        <option value="LG">LG</option>
+        <option value="ader">알뜰폰</option>
+      </select>
+      <div class="phone_under">
+      <label for="#"></label>
+        <input type="tel" id="phone_num" placeholder="전화번호 입력">
+        <button type="button" class="go_btn">인증번호 받기</button>
+      </div>
+      <div class="none_box">
+        <label for="#" class="none"></label>
+        <input type="text" placeholder="인증번호 입력하세요" maxlength="4" disabled>
+      </div>
+      <button type="button" class="end_btn">
+        <span>가입하기</span>
+        </button>
+    </div>
+    
+
+  </div>
+
+  <!-- 푸터 영역 -->
+  <div class="footer">
+    <div class="bottom">
+      <div class="bt-menu">
+        <!-- 하단 메뉴 영역 -->
+        <ul>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li>
+            &nbsp;|&nbsp;
+            <a href="#">개인정보처리방침</a>
+          </li>
+          <li>
+            &nbsp;|&nbsp;
+            <a href="#">책임의 한계와 법적고지</a>
+          </li>
+          <li>
+            &nbsp;|&nbsp;
+            <a href="#">회원정보</a>
+          </li>
+          <li>
+            &nbsp;|&nbsp;
+            <a href="#">고객센터</a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        ©Copyright NAVER Corp. All Rights Reserved.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
