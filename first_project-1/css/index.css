@@ -28,29 +28,6 @@ img {
 /* 전역 버튼 스타일 */
 /* 버튼과 같이 여러 곳에서 반복 사용되는 요소를 공통 스타일로
 작업하면 매번 다시 작성할 필요가 없음 */
-.btn {
-  width: 130px;
-  padding: 10px;
-  border: 2px solid #333;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-weight: 700;
-  color: #333;
-  text-align: center;
-  cursor: pointer;
-  /* cursor 커스텀 : *기본값은 삽입(ex)auto,pointer) */
-
-  /* a, span 같은 인라인 요소를 버튼으로 사용할 수 있으니 블록으로 지정 */
-  display: block;
-  /* 앞에 적용 대상을 기재하지 않으면 기본값이 all */
-  /* 전환 효과는 요소에 직접 적용해야 hover 했을때와 안했을때 둘 다 적용됨 */
-  transition: .4s;
-}
-.btn:hover {
-  background: #333;
-  color: #fff;
-}
 
 .inner {
   /* 가운데 정렬 */
@@ -58,4 +35,71 @@ img {
   width: 1100px;
   margin: 0 auto;
   position: relative;
+}
+
+/* 전역 변수 설정 */
+:root {
+  --color-text: #424242;
+  --color-background: #044288;
+  --color-background_sub: #316db1;
+  --color-orange: #ff9950;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  border-color: var(--color-orange);
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--color-orange);
+}
+
+.btn:hover {
+  color: var(--color-text);
+  background-color: var(--color-orange);
+}
+
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: var(--color-background_sub);
+padding: 10px 20px;
+}
+header .logo {
+font-size: 48px;
+display: flex;
+align-items: center;
+}
+.material-icons {
+font-size: inherit;
+color: var(--color-orange);
+}
+
+header .nav__menu--main {
+display: flex;
+}
+
+header .nav__menu--main > li {
+padding: 8px 12px;
+}
+
+header .nav__menu--main > li:hover {
+background-color: var(--color-orange);
+border-radius: 4px;
+}
+
+.btn-hamburger {
+position: absolute;
+right: 32px;
+font-size: 48px;
+display: none;
 }
