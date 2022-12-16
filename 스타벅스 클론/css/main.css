@@ -572,7 +572,7 @@ header .badges .badge {
 }
 .rewards .inner {
   height: 241px;
-  background-image: url(/images/rewards.jpg);
+  background-image: url(../images/rewards.jpg);
 }
 .rewards .btn-group {
   position: absolute;
