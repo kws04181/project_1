@@ -1,105 +1,80 @@
-/* 최상단 이동 다른 방법 */
-/* html {
-  scroll-behavior:smooth;
-} */
 
+    a {
+      text-decoration: none;
+    }s
+    
+    img {
+      /* 이미지가 인라인 요소라서 발생하는 문자기준선
+      (baseline) 아래의 공w간을 제거하기 위해 */
+      /* img를 레이아웃 요소로 쓰기 위해 */
+      display: block;
+    }
+    
+    
+    /* 전역 변수 설정 */
+    :root {
+      --color-text: #424242;
+      --color-background: #044288;
+      --color-background_sub: #316db1;
+      --color-orange: #ff9950;
+    }
+  
+    a {
+      text-decoration: none;
+      color: white;
+    }
 
-/* 기본(공통) 스타일 */
-* {
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.4;
-  color: #333;
-  /* 위 속성들은 상속되기에 전체 스타일을 한번에 제어 */
-}
+    .btn {
+      width: 100px;
+      height: 40px;
+      border-color: var(--color-orange);
+      border-radius: 4px;
+      font-size: 1rem;
+      background-color: transparent;
+      cursor: pointer;
+      color: var(--color-orange);
+    }
 
-a {
-  text-decoration: none;
-}
-
-img {
-  /* 이미지가 인라인 요소라서 발생하는 문자기준선
-  (baseline) 아래의 공간을 제거하기 위해 */
-  /* img를 레이아웃 요소로 쓰기 위해 */
-  display: block;
-}
-
-/* 전역 버튼 스타일 */
-/* 버튼과 같이 여러 곳에서 반복 사용되는 요소를 공통 스타일로
-작업하면 매번 다시 작성할 필요가 없음 */
-
-.inner {
-  /* 가운데 정렬 */
-  /* max-width: 1100px; */
-  width: 1100px;
-  margin: 0 auto;
-  position: relative;
-}
-
-/* 전역 변수 설정 */
-:root {
-  --color-text: #424242;
-  --color-background: #044288;
-  --color-background_sub: #316db1;
-  --color-orange: #ff9950;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-.btn {
-  width: 100px;
-  height: 40px;
-  border-color: var(--color-orange);
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: transparent;
-  cursor: pointer;
-  color: var(--color-orange);
-}
-
-.btn:hover {
-  color: var(--color-text);
-  background-color: var(--color-orange);
-}
+    .btn:hover {
+      color: var(--color-text);
+      background-color: var(--color-orange);
+    }
 
 
 header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: var(--color-background_sub);
-padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-background_sub);
+  padding: 10px 20px;
 }
 header .logo {
-font-size: 48px;
-display: flex;
-align-items: center;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
 }
+
 .material-icons {
-font-size: inherit;
-color: var(--color-orange);
+  font-size: inherit;
+  color: var(--color-orange);
 }
 
 header .nav__menu--main {
-display: flex;
+  display: flex;
 }
 
 header .nav__menu--main > li {
-padding: 8px 12px;
+  padding: 8px 12px;
 }
 
 header .nav__menu--main > li:hover {
-background-color: var(--color-orange);
-border-radius: 4px;
+  background-color: var(--color-orange);
+  border-radius: 4px;
 }
 
 .btn-hamburger {
-position: absolute;
-right: 32px;
-font-size: 48px;
-display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 48px;
+  display: none;
 }
