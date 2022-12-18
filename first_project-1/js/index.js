@@ -36,7 +36,7 @@ toTopEl.addEventListener('click',function () {
 window.addEventListener('scroll', function () {
   // console.log(window.scrollY);
   
-  if (window.scrollY > 500) {
+  if (window.scrollY > 100) {
     // badgEl.style.display = 'none';
 
     // gsap.to(요소, 시간, 속성) 메소드 : CSS속성을 통해 애니메이션 처리
@@ -83,7 +83,7 @@ fadeEls.forEach(function (fadeEl, index) {
 // 첫번째 인수: 슬라이드 기능을 적용할 요소의 선택자
 // 두번째 인수: 다양한 옵션을 객체 데이터로 전달(다른 옵션들은 API 참고)
 // https://swiperjs.com/get-started
-new Swiper('.notice .swiper', {
+new Swiper('.header-top .swiper', {
   // Optional parameters
   direction: 'vertical', // 수직 슬라이드
   loop: true, // 반복 재생 여부

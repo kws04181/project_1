@@ -1,80 +1,166 @@
+/* 최상단 이동 다른 방법 */
+/* html {
+  scroll-behavior:smooth;
+} */
 
-    a {
-      text-decoration: none;
-    }s
-    
-    img {
-      /* 이미지가 인라인 요소라서 발생하는 문자기준선
-      (baseline) 아래의 공w간을 제거하기 위해 */
-      /* img를 레이아웃 요소로 쓰기 위해 */
-      display: block;
-    }
-    
-    
-    /* 전역 변수 설정 */
-    :root {
-      --color-text: #424242;
-      --color-background: #044288;
-      --color-background_sub: #316db1;
-      --color-orange: #ff9950;
-    }
-  
-    a {
-      text-decoration: none;
-      color: white;
-    }
 
-    .btn {
-      width: 100px;
-      height: 40px;
-      border-color: var(--color-orange);
-      border-radius: 4px;
-      font-size: 1rem;
-      background-color: transparent;
-      cursor: pointer;
-      color: var(--color-orange);
-    }
+/* 기본(공통) 스타일 */
+* {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+  /* 위 속성들은 상속되기에 전체 스타일을 한번에 제어 */
+}
 
-    .btn:hover {
-      color: var(--color-text);
-      background-color: var(--color-orange);
-    }
+a {
+  text-decoration: none;
+}
 
+img {
+  /* 이미지가 인라인 요소라서 발생하는 문자기준선
+  (baseline) 아래의 공간을 제거하기 위해 */
+  /* img를 레이아웃 요소로 쓰기 위해 */
+  display: block;
+}
+
+/* 헤더 40*70 */
 
 header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.header-top {
+  height: 40px;
+  background: black;
+}
+
+.header-top .swiper {
+  height: 40px;
+}
+.header-top .swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-top .swiper .swiper-slide a{
+  color: #fff;
+  font-size: 12px;
+}
+
+.header-main {
+  height: 50px;
+  /* background: transparent; */
+  background: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-background_sub);
   padding: 10px 20px;
+  transition: .5s;
+  font-size: 18px;
 }
-header .logo {
-  font-size: 28px;
+
+.header-main:hover {
+  background: #fdfdfd;
+}
+
+.gnb .gnb-menu {
   display: flex;
-  align-items: center;
+  gap: 50px;
 }
 
-.material-icons {
-  font-size: inherit;
-  color: var(--color-orange);
+.gnb .gnb-menu li:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #333;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
 }
 
-header .nav__menu--main {
-  display: flex;
+.gnb .gnb-menu li:hover:after { transform: scaleX(1); }
+
+.header-main:hover .sub-menu {
+  display: block;
 }
 
-header .nav__menu--main > li {
-  padding: 8px 12px;
-}
-
-header .nav__menu--main > li:hover {
-  background-color: var(--color-orange);
-  border-radius: 4px;
-}
-
-.btn-hamburger {
+.sub-menu {
   position: absolute;
-  right: 32px;
-  font-size: 48px;
+  top: 100%;
+  left: 0;
+  width: 100%;
   display: none;
+  text-align: left;
+  color: #363A36;
+  background: rgb(255, 255, 255);
 }
+
+.sub-menu .sub-menu-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.sub-menu .sub-menu-gnb {
+  padding: 30px 40px 20px;
+}
+
+.sub-menu .sub-menu-gnb .sub-menu-gnb-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.sub-menu .sub-menu-gnb li:first-child {
+  padding-bottom: 20px;
+}
+
+.sub-menu .sub-menu-gnb li {
+  padding-bottom:10px;
+  font-size: 14px;
+}
+
+.sub-menu .sub-menu-gnb li a {
+  color: #888;
+}
+
+.gnb .sub-menu li:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px rgb(255, 255, 255);  
+} 
+
+.utility .bar {
+  display: flex;
+  gap: 10px;
+}
+
+#container {
+  width: 100%;
+  min-height:3000px;
+}
+
+.main-visual {
+position: relative;
+width: 100%;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.contents {
+  position: relative;
+  background: #fff
+}
+
+.contents-1 {
+  margin-top: 110px;
+  height: 1000px;
+  background-image: url(http://brownyard.co.kr/artfinger3/main/main01_season.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
