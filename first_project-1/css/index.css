@@ -16,7 +16,8 @@
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important; 
+  color: initial;
 }
 
 img {
@@ -159,7 +160,7 @@ overflow: hidden;
 .contents-1 {
   margin-top: 110px;
   height: 1000px;
-  background-image: url(http://brownyard.co.kr/artfinger3/main/main01_season.jpg);
+  /* background-image: url(http://brownyard.co.kr/artfinger3/main/main01_season.jpg); */
   background-repeat: no-repeat;
   background-position: center;
 }

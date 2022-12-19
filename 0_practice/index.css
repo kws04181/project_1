@@ -1,0 +1,157 @@
+
+
+/* 공통 영역 */
+* {
+  box-sizing: border-box;
+}
+/* 공통 영역 */
+
+/* 헤더 영역 */
+
+header {
+  width: 100%;
+  background: rgb(207, 207, 207);
+  position: fixed;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1100px; /* 1100px이상 늘어나지 않음 */
+  height: 120px;
+  background: rgb(160, 160, 160);
+  display: flex;
+}
+
+.inner > h1 {
+  width: 100px;
+  background: greenyellow;
+  /* display: flex;
+  flex-grow: 0; */
+}
+
+.inner > nav {
+  background: palegreen;
+  flex-grow: 1;
+  /* width: calc(100% - 268px); */
+}
+
+.inner > nav > ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inner > .delivery_order {
+  width: 168px;
+  background: rgb(205, 168, 241);
+}
+
+/* 헤더 영역 */
+
+/* 메인 영역 */
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: rgb(233, 176, 176);
+}
+
+.slide__content {
+  height: 480px;
+  background: rgb(211, 185, 185);
+}
+
+.youtube__content {
+  height: 605px;
+  background-color: aqua;
+}
+
+.sns__content {
+  height: 160px;
+  background: rgb(123, 151, 194);
+}
+
+.sns__content > ul {
+  display: flex;
+}
+
+.sns__content > ul > li {
+  flex: 1;
+  text-align: center;
+}
+
+.guide__content {
+  height: 480px;
+  display: flex;
+  background: rgb(199, 204, 124);
+  text-align: center;
+}
+
+.guide__content > div {
+  flex: 1;
+}
+
+.guide__content > .content__app {
+  background: rgb(223, 73, 178);
+}
+
+.guide__content > .content__delivery {
+  background: rgb(0, 255, 55);
+}
+
+.store__content {
+  height: 597px;
+  background: honeydew;
+}
+
+
+.store__content ul {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.store__content ul > li {
+  float: left;
+  width: 16.66%;
+  text-align: center;
+}
+
+.banner__content {
+  height: 200px;
+  background: #acb467;
+}
+
+
+/* 메인 영역 */
+
+/* 푸터 영역 */
+
+footer {
+  width: 100%;
+  height: 680px;
+  background: #2b0200;
+}
+
+.footer__center {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  background: #b46b67;
+}
+
+/* 푸터 영역 */
+
+
+/* 반응형 미디어쿼리는 CSS 맨밑에 작성 */
+@media screen and (max-width:767px ){
+  .guide__content {
+    /* 이미 적용되어 있음 */
+    /* display: flex; */
+    flex-direction: column;
+  }
+}
+
+  @media screen and (max-width:767px ){
+    .store__content ul > li {
+      width: 33.33%;
+    }
+  }
