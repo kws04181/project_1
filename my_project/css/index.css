@@ -1,0 +1,187 @@
+/* 최상단 이동 다른 방법 */
+/* html {
+  scroll-behavior:smooth;
+} */
+
+
+/* 기본(공통) 스타일 */
+* {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+  /* 위 속성들은 상속되기에 전체 스타일을 한번에 제어 */
+}
+
+a {
+  text-decoration: none !important; 
+  color: initial;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  /* 이미지가 인라인 요소라서 발생하는 문자기준선
+  (baseline) 아래의 공간을 제거하기 위해 */
+  /* img를 레이아웃 요소로 쓰기 위해 */
+  display: block;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+#header {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+}
+
+.logo-area {
+  cursor: pointer;
+}
+
+.header-section {
+  height: 100px;
+  /* background: rgb(179, 179, 179); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-menu li {
+  font-size: 14px;
+  color: black;
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+.header-menu li:hover {
+  color: coral;
+}
+
+.header-menu li + li {
+  padding-left: 40px;
+}
+
+.btn-group > button {
+  width: 72px;
+  font-size: 14px;
+  border: none;
+  background: #fff;
+}
+
+.btn-group > .dropdown-toggle {
+  color: black;
+  font-weight: 700;
+}
+
+.btn-group > .dropdown-toggle:hover {
+  background: none;
+  color: coral;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  background: none;
+  color: coral;
+}
+
+
+.utility .icons {
+  display: flex;
+  cursor: pointer;
+  margin: 0;
+}
+
+.utility .icons li + li {
+  padding-left: 35px;
+}
+
+.btn-secondary .dropdown-toggle {
+  border: none;
+  background: white;
+}
+
+#container {
+  width: 100%;
+  background: black;
+}
+
+.container-bg {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 674px;
+  background: url(/my_project/img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 1700px auto;
+  background-position-x: 100px;
+  background-position-y: -50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.contents-1 {
+  display: flex;
+  flex-flow: column;
+  padding-top: 110px;
+}
+
+.contents-1 .con-2-text {
+  margin-top: 22px;
+  margin-bottom: 35px;
+}
+
+
+.btn-primary {
+  background: hsla(354, 60%, 47%, 1);
+
+  background: linear-gradient(135deg, hsla(354, 60%, 47%, 1) 0%, hsla(216, 10%, 60%, 1) 50%, hsla(192, 81%, 42%, 1) 100%);
+
+  background: -moz-linear-gradient(135deg, hsla(354, 60%, 47%, 1) 0%, hsla(216, 10%, 60%, 1) 50%, hsla(192, 81%, 42%, 1) 100%);
+
+  background: -webkit-linear-gradient(135deg, hsla(354, 60%, 47%, 1) 0%, hsla(216, 10%, 60%, 1) 50%, hsla(192, 81%, 42%, 1) 100%);
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C0303F", endColorstr="#8F97A3", GradientType=1 );
+  border: none;
+  font-size: 20px;
+  width: 172px;
+}
+
+.btn-secondary {
+  background: black;
+  /* border: 5px solid white; */
+  font-size: 20px;
+  width: 172px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
